@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Tab Design'),
     );
   }
 }
@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text(widget.title),
       ),
       body: Column(
@@ -95,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           ),
           Container(
             decoration: new BoxDecoration(
-              color: Theme.of(context).primaryColor,
+              color: Colors.black,
             ),
             padding: EdgeInsets.symmetric(
               vertical: 10,
