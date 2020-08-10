@@ -37,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   TabController _controller;
   String _tabTitle;
   int _tabCount;
+  final List<String> tabTitles = ["All", "Completed", "On-going"];
 
   @override
   void initState() {
@@ -45,13 +46,14 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
     _controller.addListener(() {
       setState(() {
-        //_tabCount = _controller.index;
+        _tabTitle = tabTitles[_controller.index];
+        _tabCount = 0;
       });
     });
 
     setState(() {
       _tabCount = 0;
-      _tabTitle = "Tasks";
+      _tabTitle = "All";
     });
   }
 
